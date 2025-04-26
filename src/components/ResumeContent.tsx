@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import jsPDF from 'jspdf';
 import { toast } from "sonner";
 
@@ -242,7 +242,8 @@ export const generateResumePDF = () => {
   doc.text(doc.splitTextToSize(w3Text, 180), 15, 215);
   
   // Footer with page numbers
-  const totalPages = doc.internal.getNumberOfPages();
+  // Fixed the getNumberOfPages error by using the appropriate API method
+  const totalPages = doc.getNumberOfPages();
   for (let i = 1; i <= totalPages; i++) {
     doc.setPage(i);
     doc.setFontSize(8);
