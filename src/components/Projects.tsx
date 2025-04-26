@@ -1,5 +1,5 @@
 
-import { Database, Thermometer, Motion, Java, Event } from "lucide-react";
+import { Database, Thermometer, Code, FileCode, Calendar } from "lucide-react";
 
 const Projects = () => {
   const projects = [
@@ -22,14 +22,14 @@ const Projects = () => {
       description: "Java-based system for efficient healthcare data and appointment management. Developed a robust Java application for hospitals and clinics to manage patient records, doctor appointments, billing, and medical histories. Implemented secure authentication and optimized database handling for efficiency.",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
       tags: ["Java", "Database", "Healthcare"],
-      icon: <Java className="w-8 h-8 text-purple-600" />
+      icon: <FileCode className="w-8 h-8 text-purple-600" />
     },
     {
       title: "Event Management System",
       description: "Interface for booking and managing events with relational database support. Designed a full-stack system allowing users to book, organize, and manage events seamlessly. Integrated database management for efficient record-keeping and ticketing system.",
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
       tags: ["Full Stack", "Database", "Events"],
-      icon: <Event className="w-8 h-8 text-purple-600" />
+      icon: <Calendar className="w-8 h-8 text-purple-600" />
     }
   ];
 
