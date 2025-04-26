@@ -221,10 +221,10 @@ export const generateResumePDF = () => {
   const w1Text = "Selected among the top 26 teams out of 300+ participants for designing a cost- and material-efficient pipeline routing solution with a functional frontend prototype.";
   doc.text(doc.splitTextToSize(w1Text, 180), 15, 183);
   
-  // Workshop 2
+  // Workshop 2 - Fixed the string quotation issue here
   doc.setFontSize(11);
   doc.setFont("helvetica", "bold");
-  doc.text("Capacity Building Workshop – "Unleash Your Potential"", 15, 193);
+  doc.text("Capacity Building Workshop – \"Unleash Your Potential\"", 15, 193);
   
   doc.setFontSize(10);
   doc.setFont("helvetica", "normal");
