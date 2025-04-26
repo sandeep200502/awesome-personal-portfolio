@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 border-b">
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold text-purple-600">John Doe</Link>
+        <Link to="/" className="text-2xl font-bold text-purple-600">Sandeep Raj Saravanan</Link>
         <nav className="hidden md:flex space-x-8">
           <a href="#about" className="hover:text-purple-600 transition-colors">About</a>
           <a href="#skills" className="hover:text-purple-600 transition-colors">Skills</a>

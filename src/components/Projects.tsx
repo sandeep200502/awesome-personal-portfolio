@@ -1,23 +1,35 @@
 
+import { Database, Thermometer, Motion, Java, Event } from "lucide-react";
+
 const Projects = () => {
   const projects = [
     {
-      title: "E-commerce Platform",
-      description: "A full-stack e-commerce solution with real-time inventory management.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      tags: ["React", "Node.js", "MongoDB"]
+      title: "AI Based Face Recognition System",
+      description: "Real-time facial identification system using OpenCV and CNN for lab security. Developed an AI-driven system capable of detecting and recognizing faces in real-time to enhance lab security. Implemented using Python, OpenCV, and Convolutional Neural Networks (CNNs). Achieved high accuracy rates in live environments.",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+      tags: ["AI", "Python", "OpenCV", "CNN"],
+      icon: <Database className="w-8 h-8 text-purple-600" />
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management tool with real-time updates.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-      tags: ["Next.js", "TypeScript", "PostgreSQL"]
+      title: "Environment Management System (IoT)",
+      description: "IoT system using DHT11 and PIR sensors for temperature, humidity, and motion tracking. Built a lightweight IoT solution with ESP32 microcontroller integrating DHT11 and PIR sensors. Real-time monitoring of environmental parameters like temperature, humidity, and movement detection. Ensured remote access and data logging features.",
+      image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b",
+      tags: ["IoT", "ESP32", "Sensors", "Real-time"],
+      icon: <Thermometer className="w-8 h-8 text-purple-600" />
     },
     {
-      title: "Portfolio Website",
-      description: "A responsive portfolio website built with modern technologies.",
+      title: "HealthCare Management System",
+      description: "Java-based system for efficient healthcare data and appointment management. Developed a robust Java application for hospitals and clinics to manage patient records, doctor appointments, billing, and medical histories. Implemented secure authentication and optimized database handling for efficiency.",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-      tags: ["React", "Tailwind CSS", "Vite"]
+      tags: ["Java", "Database", "Healthcare"],
+      icon: <Java className="w-8 h-8 text-purple-600" />
+    },
+    {
+      title: "Event Management System",
+      description: "Interface for booking and managing events with relational database support. Designed a full-stack system allowing users to book, organize, and manage events seamlessly. Integrated database management for efficient record-keeping and ticketing system.",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+      tags: ["Full Stack", "Database", "Events"],
+      icon: <Event className="w-8 h-8 text-purple-600" />
     }
   ];
 
@@ -25,15 +37,18 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-16">Featured Projects</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <div key={project.title} className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="aspect-video overflow-hidden">
+              <div className="aspect-video overflow-hidden relative">
                 <img 
                   src={project.image} 
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
+                <div className="absolute top-4 right-4 bg-white p-2 rounded-full">
+                  {project.icon}
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>

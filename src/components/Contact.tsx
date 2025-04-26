@@ -10,21 +10,21 @@ const Contact = () => {
           <div>
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
             <div className="space-y-4">
-              <a href="mailto:john@example.com" className="flex items-center gap-4 text-gray-600 hover:text-purple-600">
+              <a href="mailto:sandeep02122005@gmail.com" className="flex items-center gap-4 text-gray-600 hover:text-purple-600">
                 <Mail className="w-6 h-6" />
-                <span>john@example.com</span>
+                <span>sandeep02122005@gmail.com</span>
               </a>
-              <a href="tel:+1234567890" className="flex items-center gap-4 text-gray-600 hover:text-purple-600">
+              <a href="tel:+918608376406" className="flex items-center gap-4 text-gray-600 hover:text-purple-600">
                 <Phone className="w-6 h-6" />
-                <span>+1 (234) 567-890</span>
+                <span>+91 86083 76406</span>
               </a>
-              <a href="https://github.com" className="flex items-center gap-4 text-gray-600 hover:text-purple-600">
+              <a href="https://github.com/sandeep200502" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-gray-600 hover:text-purple-600">
                 <Github className="w-6 h-6" />
-                <span>github.com/johndoe</span>
+                <span>github.com/sandeep200502</span>
               </a>
-              <a href="https://linkedin.com" className="flex items-center gap-4 text-gray-600 hover:text-purple-600">
+              <a href="https://www.linkedin.com/in/sandeeprajsaravanan" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-gray-600 hover:text-purple-600">
                 <Linkedin className="w-6 h-6" />
-                <span>linkedin.com/in/johndoe</span>
+                <span>linkedin.com/in/sandeeprajsaravanan</span>
               </a>
             </div>
           </div>
