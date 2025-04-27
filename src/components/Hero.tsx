@@ -11,7 +11,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-blue-500 to-purple-600 bg-size-200 animate-gradient-x bg-clip-text text-transparent"
         >
-          CRAFTING DIGITAL EXPERIENCE
+          Sandeep Raj Saravanan
         </motion.h1>
         <motion.p 
           initial={{ opacity: 0 }}

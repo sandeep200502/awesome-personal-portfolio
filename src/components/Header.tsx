@@ -1,4 +1,3 @@
-
 import { Button } from "./ui/button";
 import { Link, useLocation } from "react-router-dom";
 
@@ -25,7 +24,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 border-b">
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold text-purple-600">Sandeep Raj Saravanan</Link>
+        <Link to="/" className="text-2xl font-bold text-purple-600">PORTFOLIO</Link>
         <nav className="hidden md:flex space-x-8">
           <a href="#about" onClick={(e) => handleNavigation(e, "about")} className="hover:text-purple-600 transition-colors">About</a>
           <a href="#skills" onClick={(e) => handleNavigation(e, "skills")} className="hover:text-purple-600 transition-colors">Skills</a>
