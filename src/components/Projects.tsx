@@ -1,4 +1,4 @@
-import { Database, Thermometer, Code, FileCode, Calendar } from "lucide-react";
+import { Database, Thermometer, FileCode, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useInView } from 'react-intersection-observer';
 import { cn } from "@/lib/utils";
@@ -62,17 +62,17 @@ const Projects = () => {
       images: [
         {
           title: "ESP32 Microcontroller",
-          src: "esp32.jpg",
+          src: "https://images.unsplash.com/photo-1518770660439-4636190af475",
           description: "The ESP32 is a powerful, low-cost microcontroller with built-in Wi-Fi and Bluetooth capabilities, perfect for IoT applications."
         },
         {
           title: "DHT11 Sensor",
-          src: "dht11.jpg",
+          src: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
           description: "The DHT11 sensor provides accurate temperature and humidity readings with digital output."
         },
         {
           title: "PIR Motion Sensor",
-          src: "pir.jpg",
+          src: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b",
           description: "The PIR sensor detects motion by measuring infrared radiation changes in its field of view."
         }
       ],
@@ -80,20 +80,68 @@ const Projects = () => {
       icon: <Thermometer className="w-8 h-8 text-purple-600" />,
       github: "https://github.com/sandeep200502/iot-environment",
       demo: "https://iot-environment-demo.vercel.app",
-      details: `
-        The Environment Management System is built using the following components:
+      fullDescription: `
+        <h2 class="text-2xl font-bold mb-4">Project Overview</h2>
+        <p class="mb-6">The Smart Environmental Monitoring System uses the power of the Internet of Things (IoT) to monitor temperature, humidity, and motion in real-time. By integrating a DHT11 temperature and humidity sensor and a PIR motion sensor with the ESP32 microcontroller, the system provides actionable data for environmental control and security. This system is fully cloud-integrated, offering remote access and control through the Blynk mobile app, allowing users to monitor conditions from anywhere at any time.</p>
+
+        <h2 class="text-2xl font-bold mb-4">Key Features and Highlights</h2>
         
-        - ESP32 Microcontroller: Acts as the brain of the system, processing sensor data and managing communications
-        - DHT11 Sensor: Provides temperature and humidity measurements
-        - PIR Motion Sensor: Detects movement in the monitored area
-        
-        Key Features:
-        - Real-time temperature and humidity monitoring
-        - Motion detection and alerting
-        - Data logging and visualization
-        - Remote monitoring via web interface
-        - Low power consumption design
-      `
+        <h3 class="text-xl font-semibold mb-2">Real-Time Environmental Monitoring</h3>
+        <ul class="list-disc pl-5 mb-4">
+          <li class="mb-2">Temperature and Humidity Tracking: The DHT11 sensor continuously measures environmental temperature and humidity, making it ideal for maintaining comfort or preventing issues like mold growth in spaces like homes, offices, and storage areas.</li>
+          <li class="mb-2">Motion Detection: The PIR sensor detects movement in the monitored area, providing an added layer of security by sending alerts when unusual activity is detected.</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold mb-2">ESP32 Microcontroller</h3>
+        <p class="mb-4">The ESP32 microcontroller acts as the central hub, handling sensor data collection, processing, and communication with cloud platforms. With built-in Wi-Fi and Bluetooth capabilities, the ESP32 allows seamless wireless integration for remote monitoring.</p>
+
+        <h3 class="text-xl font-semibold mb-2">Cloud Integration</h3>
+        <p class="mb-4">Data from the sensors is transmitted to the cloud in real-time, where it can be accessed and analyzed via web dashboards or the mobile app. The cloud integration provides the flexibility of accessing historical data for analysis and ensures that the system is always connected, even when you're on the move.</p>
+
+        <h3 class="text-xl font-semibold mb-2">Blynk Mobile App Control</h3>
+        <p class="mb-4">The Blynk app offers a user-friendly interface for controlling and visualizing sensor data. Users can receive alerts, check environmental conditions, and make adjustments remotely, ensuring convenience and peace of mind.</p>
+
+        <div class="grid md:grid-cols-3 gap-6 my-8">
+          <div class="animate-fade-in">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="ESP32" class="rounded-lg shadow-lg mb-2" />
+            <p class="text-sm text-gray-600">ESP32 Microcontroller</p>
+          </div>
+          <div class="animate-fade-in delay-100">
+            <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1" alt="DHT11" class="rounded-lg shadow-lg mb-2" />
+            <p class="text-sm text-gray-600">DHT11 Temperature & Humidity Sensor</p>
+          </div>
+          <div class="animate-fade-in delay-200">
+            <img src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b" alt="PIR" class="rounded-lg shadow-lg mb-2" />
+            <p class="text-sm text-gray-600">PIR Motion Sensor</p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold mb-4">Challenges and Solutions</h2>
+        <div class="space-y-4">
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Sensor Calibration and Accuracy</h3>
+            <p>One of the primary challenges was calibrating the sensors for accurate readings. The DHT11 sensor in particular has limitations in its accuracy and range. Fine-tuning its calibration to match environmental standards required extensive testing and adjustments.</p>
+          </div>
+          
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Power Management</h3>
+            <p>Ensuring low power consumption was crucial, especially since the system is intended for long-term, continuous deployment. Balancing the ESP32's Wi-Fi performance with energy efficiency required optimizing data transmission intervals and using deep sleep modes when the system is idle.</p>
+          </div>
+          
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Wireless Connectivity Issues</h3>
+            <p>Maintaining a stable Wi-Fi connection in environments with fluctuating network strength or interference posed challenges. Strategies such as implementing a buffer for data transmission and reconnecting to the network during outages were necessary to ensure consistent data delivery.</p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold my-4">Future Enhancements</h2>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Integration with AI for predictive analytics</li>
+          <li>Voice assistant compatibility</li>
+          <li>Edge computing implementation</li>
+          <li>Energy harvesting capabilities</li>
+          <li>Additional sensor integration</li>
+        </ul>`
     },
     {
       title: "HealthCare Management System",
