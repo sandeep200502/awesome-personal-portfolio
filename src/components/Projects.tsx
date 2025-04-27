@@ -1,4 +1,4 @@
-import { Database, Thermometer, Code, FileCode, Calendar } from "lucide-react";
+import { Database, Thermometer, FileCode, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useInView } from 'react-intersection-observer';
 import { cn } from "@/lib/utils";
@@ -49,11 +49,60 @@ const ProjectCard = ({ project, index }) => {
 const Projects = () => {
   const projects = [
     {
-      title: "AI Based Face Recognition System",
-      description: "Real-time facial identification system using OpenCV and CNN for lab security. Developed an AI-driven system capable of detecting and recognizing faces in real-time to enhance lab security. Implemented using Python, OpenCV, and Convolutional Neural Networks (CNNs). Achieved high accuracy rates in live environments.",
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
-      tags: ["AI", "Python", "OpenCV", "CNN"],
-      icon: <Database className="w-8 h-8 text-purple-600 dark:text-purple-400" />
+      title: "Smart Environmental Monitoring System Using IoT",
+      description: "Real-time IoT system using ESP32, DHT11, and PIR sensors for environmental monitoring. Features cloud integration via Blynk app, offering remote access and control for temperature, humidity, and motion tracking.",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+      images: [
+        {
+          title: "ESP32 Microcontroller",
+          src: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+          description: "The ESP32 is a powerful, low-cost microcontroller with built-in Wi-Fi and Bluetooth capabilities, perfect for IoT applications."
+        },
+        {
+          title: "DHT11 Sensor",
+          src: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b",
+          description: "The DHT11 sensor provides accurate temperature and humidity readings with digital output."
+        },
+        {
+          title: "PIR Motion Sensor",
+          src: "https://images.unsplash.com/photo-1500673922987-e212871fec22",
+          description: "The PIR sensor detects motion by measuring infrared radiation changes in its field of view."
+        }
+      ],
+      tags: ["IoT", "ESP32", "Sensors", "Real-time"],
+      icon: <Thermometer className="w-8 h-8 text-purple-600" />,
+      fullDescription: `
+        <h2 class="text-2xl font-bold mb-4">Project Overview</h2>
+        <p class="mb-6">The Smart Environmental Monitoring System uses the power of the Internet of Things (IoT) to monitor temperature, humidity, and motion in real-time. By integrating a DHT11 temperature and humidity sensor and a PIR motion sensor with the ESP32 microcontroller, the system provides actionable data for environmental control and security. This system is fully cloud-integrated, offering remote access and control through the Blynk mobile app, allowing users to monitor conditions from anywhere at any time.</p>
+
+        <h3 class="text-xl font-bold mb-3">Key Features and Highlights</h3>
+        <div class="mb-6">
+          <h4 class="font-semibold mb-2">Real-Time Environmental Monitoring:</h4>
+          <ul class="list-disc pl-5 mb-4 space-y-2">
+            <li>Temperature and Humidity Tracking: The DHT11 sensor continuously measures environmental temperature and humidity, making it ideal for maintaining comfort or preventing issues like mold growth in spaces like homes, offices, and storage areas.</li>
+            <li>Motion Detection: The PIR sensor detects movement in the monitored area, providing an added layer of security by sending alerts when unusual activity is detected.</li>
+          </ul>
+        </div>
+
+        <h3 class="text-xl font-bold mb-3">Challenges Faced During Development</h3>
+        <ul class="list-disc pl-5 mb-6 space-y-2">
+          <li><strong>Sensor Calibration and Accuracy:</strong> Fine-tuning calibration to match environmental standards required extensive testing.</li>
+          <li><strong>Power Management:</strong> Optimizing data transmission intervals and using deep sleep modes for energy efficiency.</li>
+          <li><strong>Wireless Connectivity:</strong> Implementing buffers and reconnection strategies for stable data transmission.</li>
+          <li><strong>Real-Time Processing:</strong> Efficiently handling multiple sensor readings without overwhelming the system.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-3">Future Enhancements</h3>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Expansion to additional environmental sensors</li>
+          <li>AI-powered predictions for proactive adjustments</li>
+          <li>Voice assistant integration</li>
+          <li>Edge computing implementation</li>
+          <li>Energy harvesting capabilities</li>
+        </ul>
+      `,
+      github: "https://github.com/sandeep200502/iot-environment",
+      demo: "https://iot-environment-demo.vercel.app"
     },
     {
       title: "Environment Management System (IoT)",
