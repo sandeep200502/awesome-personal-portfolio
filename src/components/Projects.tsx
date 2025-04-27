@@ -1,4 +1,4 @@
-import { Database, Thermometer, Code, FileCode, Calendar } from "lucide-react";
+import { Database, Thermometer, FileCode, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useInView } from 'react-intersection-observer';
 import { cn } from "@/lib/utils";
@@ -49,11 +49,59 @@ const ProjectCard = ({ project, index }) => {
 const Projects = () => {
   const projects = [
     {
-      title: "AI Based Face Recognition System",
-      description: "Real-time facial identification system using OpenCV and CNN for lab security. Developed an AI-driven system capable of detecting and recognizing faces in real-time to enhance lab security. Implemented using Python, OpenCV, and Convolutional Neural Networks (CNNs). Achieved high accuracy rates in live environments.",
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
-      tags: ["AI", "Python", "OpenCV", "CNN"],
-      icon: <Database className="w-8 h-8 text-purple-600 dark:text-purple-400" />
+      title: "Smart Environmental Monitoring System Using IoT",
+      description: "The Smart Environmental Monitoring System uses the power of the Internet of Things (IoT) to monitor temperature, humidity, and motion in real-time. By integrating a DHT11 temperature and humidity sensor and a PIR motion sensor with the ESP32 microcontroller, the system provides actionable data for environmental control and security. This system is fully cloud-integrated, offering remote access and control through the Blynk mobile app, allowing users to monitor conditions from anywhere at any time.",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+      tags: ["IoT", "ESP32", "Sensors", "Real-time"],
+      icon: <Thermometer className="w-8 h-8 text-purple-600" />,
+      github: "https://github.com/sandeep200502/iot-environment",
+      demo: "https://iot-environment-demo.vercel.app",
+      images: [
+        {
+          title: "ESP32 Microcontroller",
+          src: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+          description: "The ESP32 is a powerful, low-cost microcontroller with built-in Wi-Fi and Bluetooth capabilities."
+        },
+        {
+          title: "DHT11 Sensor",
+          src: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b",
+          description: "The DHT11 sensor provides accurate temperature and humidity readings with digital output."
+        },
+        {
+          title: "PIR Motion Sensor",
+          src: "https://images.unsplash.com/photo-1501854140801-50d01698950b",
+          description: "The PIR sensor detects motion by measuring infrared radiation changes in its field of view."
+        }
+      ],
+      details: `
+        # Project Overview
+        The Smart Environmental Monitoring System uses IoT technology for real-time monitoring of environmental conditions and security.
+
+        ## Key Features
+        - Real-Time Environmental Monitoring with DHT11 sensor
+        - Motion Detection using PIR sensor
+        - ESP32 Microcontroller as central hub
+        - Cloud Integration for data access
+        - Blynk Mobile App Control
+        - Smart Notifications and Alerts
+        - Energy-efficient design
+        - Scalable architecture
+
+        ## Technical Implementation
+        The system integrates various components:
+        - ESP32 for processing and wireless communication
+        - DHT11 for temperature/humidity sensing
+        - PIR sensor for motion detection
+        - Cloud platform for data storage and analysis
+        - Mobile app for remote monitoring
+
+        ## Future Enhancements
+        - Integration of additional sensors
+        - AI-powered predictive analytics
+        - Voice assistant integration
+        - Edge computing capabilities
+        - Energy harvesting features
+      `
     },
     {
       title: "Environment Management System (IoT)",
