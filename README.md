@@ -1,8 +1,4 @@
-# Welcome to my Peersonal PortFolio
-
-## How can I edit this code?
-
-There are several ways of editing your application.
+# Welcome to my Personal PortFolio
 
 Follow these steps:
 
