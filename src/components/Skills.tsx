@@ -4,6 +4,10 @@ import { Award, Trophy, GraduationCap } from "lucide-react";
 const Skills = () => {
   const skillCategories = [
     {
+      title: "Frontend",
+      skills: ["React", "Next.js", "Tailwind CSS", "HTML5/CSS3"]
+    },
+    {
       title: "Backend",
       skills: ["Node.js", "MySQL", "PostgreSQL, MongoDB", "Flask", "RESTful APIs"]
     },
@@ -41,7 +45,7 @@ const Skills = () => {
     <section id="skills" className="py-20 bg-purple-50">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-16">Skills & Expertise</h2>
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {skillCategories.map((category) => (
             <div key={category.title} className="bg-white p-8 rounded-xl shadow-sm">
               <h3 className="text-xl font-semibold mb-4 text-purple-600">{category.title}</h3>

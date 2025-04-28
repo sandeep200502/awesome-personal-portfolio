@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -31,12 +32,12 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex gap-4 justify-center"
+          className="flex gap-4 justify-center mt-8"
         >
           <a href="#projects" className="px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
             View My Work
           </a>
-          <a href="#about" className="px-8 py-3 border-2 border-purple-600 text-purple-600 dark:border-purple-400 dark:text-purple-400 rounded-lg hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors">
+          <a href="#about" className="px-8 py-3 border-2 border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors">
             About Me
           </a>
         </motion.div>
