@@ -9,7 +9,7 @@ const Workshops = () => {
       icon: <Award className="w-12 h-12 text-purple-600" />
     },
     {
-      title: "Capacity Building Workshop – "Unleash Your Potential"",
+      title: 'Capacity Building Workshop – "Unleash Your Potential"',
       description: "Focused on self-discovery, entrepreneurial thinking, life mapping, SMART goal development, and vision board creation to enhance personal and professional growth.",
       icon: <Lightbulb className="w-12 h-12 text-purple-600" />
     },
