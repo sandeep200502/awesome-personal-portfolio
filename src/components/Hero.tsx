@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -9,18 +8,25 @@ const Hero = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-blue-500 to-purple-600 bg-size-200 animate-gradient-x bg-clip-text text-transparent"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-text-gradient bg-gradient-to-r from-purple-600 via-blue-500 to-purple-600 bg-[length:200%_auto] bg-clip-text text-transparent"
         >
           Sandeep Raj Saravanan
         </motion.h1>
-        <motion.p 
+        <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-xl md:text-2xl text-gray-400 mb-12"
+          className="space-y-4"
         >
-          B.Tech CSE (Core) Student | RHCSA Certified | Web Developer | AI & ML Learner | Interested in IoT
-        </motion.p>
+          <p className="text-xl md:text-2xl text-gray-400 mb-4">
+            B.Tech CSE (Core) Student | RHCSA Certified | Web Developer | AI & ML Learner | Interested in IoT
+          </p>
+          <div className="text-lg text-gray-500">
+            <p>SRM University, Kattankulathur</p>
+            <p>B.Tech - Computer Science and Engineering (Core)</p>
+            <p>2023 – 2027</p>
+          </div>
+        </motion.div>
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

@@ -63,58 +63,71 @@
   .animate-scale-in {
     animation: scale-in 0.8s ease-out forwards;
   }
-}
 
-@keyframes gradient-x {
-  0%, 100% {
-    background-position: 0% 50%;
+  .animate-text-gradient {
+    animation: text-gradient 8s linear infinite;
   }
-  50% {
-    background-position: 100% 50%;
-  }
-}
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
+  @keyframes gradient-x {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-@keyframes slide-in-left {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 
-@keyframes slide-in-right {
-  0% {
-    opacity: 0;
-    transform: translateX(100px);
+  @keyframes slide-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 
-@keyframes scale-in {
-  0% {
-    opacity: 0;
-    transform: scale(0.95);
+  @keyframes slide-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
-  100% {
-    opacity: 1;
-    transform: scale(1);
+
+  @keyframes scale-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes text-gradient {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
   }
 }
 
